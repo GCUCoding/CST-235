@@ -6,6 +6,29 @@
 
 <h:head></h:head> 
 <body> 
-
+<h:form>
+	<p>
+	Full Name: <h:inputText value="#{user.name}" title=""/>
+	</p>
+	<p>
+	Email: <h:inputText value="#{user.email}" title=""/>
+	</p>
+	<p>
+	Birthday: <h:inputText value="#{user.birthday}" title=""/>
+	<p style="font-size: 8pt;">
+	Please input in mm-dd-yyyy form.
+	</p>
+	</p>
+	<p>
+	Username: <h:inputText value="#{user.username}" title=""/>
+	</p>
+	<p>
+	Password: <h:inputSecret value="#{user.password}" title=""/>
+	</p>
+	<p>
+	Confirm Password: <h:inputSecret value="confirm" title=""/>
+	</p>
+	<h:commandButton value="Submit" action="#{formController.onRegistrationSubmit(user)}"/>
+	</h:form>
 </body> 
 </html>
