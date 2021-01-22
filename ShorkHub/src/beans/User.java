@@ -1,36 +1,28 @@
 package beans;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
-
-@ManagedBean
-@ViewScoped
 public class User 
 {
 	private int id;
 	private String name;
 	private String birthday;
 	private String email;
-	private String username;
 	private String password;
 	
 	public User()
 	{
-		id = -1;
+		id = 0;
 		name = "";
 		birthday = "";
 		email = "";
-		username = "";
 		password = "";
 	}
 	
-	public User(int id, String name, String birthday, String email, String username, String password)
+	public User(int id, String name,String birthday, String email, String password)
 	{
-		this.id = -1;
+		this.id = id;
 		this.name = name;
 		this.birthday = birthday;
 		this.email = email;
-		this.username = username;
 		this.password = password;
 	}
 	
@@ -73,16 +65,6 @@ public class User
 	public void setEmail(String email) 
 	{
 		this.email = email;
-	}
-	
-	public String getUsername()
-	{
-		return username;
-	}
-	
-	public void setUsername(String username)
-	{
-		this.username = username;
 	}
 
 	public String getPassword() 
