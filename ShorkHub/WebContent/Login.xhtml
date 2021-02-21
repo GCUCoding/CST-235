@@ -6,6 +6,16 @@
 
 <h:head></h:head> 
 <body> 
-
+<h:form>
+	<p>
+	Username: <h:inputText value="#{user.username}" title=""/>
+	</p>
+	<p>
+	Password: <h:inputSecret value="#{user.password}" title=""/>
+	</p>
+	<p>
+	<h:commandButton value="Submit" action="#{formController.onLoginSubmit(user)}"/>
+	</p>
+</h:form>
 </body> 
 </html>
