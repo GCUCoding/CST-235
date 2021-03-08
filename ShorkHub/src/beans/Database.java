@@ -17,7 +17,13 @@ public class Database
 	{
 		return products;
 	}
-
+	
+	public boolean addProduct(Product product)
+	{
+		this.products.add(product);
+		return true;
+	}
+	
 	public void setProducts(ArrayList<Product> products)
 	{
 		this.products = products;
