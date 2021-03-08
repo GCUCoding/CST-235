@@ -7,8 +7,8 @@ import beans.Product;
 
 public class ProductService 
 {
-	Database db = new Database();
-	public boolean addProduct(Product product)
+	static Database db = new Database();
+	public int addProduct(Product product)
 	{
 		return db.addProduct(product);
 	}

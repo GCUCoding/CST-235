@@ -1,5 +1,10 @@
 package beans;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+@ManagedBean
+@ViewScoped
 public class Product
 {
 	private int id;
@@ -10,9 +15,9 @@ public class Product
 	public Product()
 	{
 		this.id = 0;
-		this.name = "";
+		this.name = " ";
 		this.price = 0.0;
-		this.description = "";
+		this.description = " ";
 	}
 	
 	public Product(int id, String name, double price, String description)

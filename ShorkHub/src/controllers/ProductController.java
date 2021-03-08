@@ -14,17 +14,19 @@ import services.ProductService;
 @ViewScoped
 public class ProductController 
 {
-	ProductService productService = new ProductService();
+	static ProductService productService = new ProductService();
 	@Inject
 	ArrayList<Product> products;
 	public ArrayList<Product> getProducts()
 	{
-		return this.productService.showAllProducts();
+		System.out.println(productService.showAllProducts());
+		return productService.showAllProducts();
 	}
 	
 	public String addProduct(Product product)
 	{
-		productService.addProduct(product);
+		FacesContext.getCurrentInstance().getExternalContext().getRequestMap().put("product", product);
+		System.out.println(productService.addProduct(product));
 		return "Products.xhtml";
 	}
 }

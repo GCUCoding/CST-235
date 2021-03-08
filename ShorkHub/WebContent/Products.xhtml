@@ -7,6 +7,7 @@
 	<ui:composition template="/layouts/commonLayout.xhtml">
 	<ui:define name="title">Shop</ui:define>
 	<ui:define name="content">
+	<body>
 		<h1>Shop</h1>
 		<h:dataTable value="#{productController.products}" 
 			var="p" styleClass="productsTable"
@@ -33,25 +34,26 @@
 			<table>
 				<tr>
 					<th>ID:</th>
-					<td><h:inputText value="#{product.id}" title=""/></td>
+					<td><h:inputText id="id" value="#{product.id}" title=""/></td>
 				</tr>
 				<tr>
 					<th>Product Name:</th>
-					<td><h:inputText value="#{product.name}" title=""/></td>
+					<td><h:inputText id="name" value="#{product.name}" title=""/></td>
 				</tr>
 				<tr>
 					<th>Product Price:</th>
-					<td><h:inputText value="#{product.price}" title=""/></td>
+					<td><h:inputText id="price" value="#{product.price}" title=""/></td>
 				</tr>
 				<tr>
 					<th>Product Description:</th>
-					<td><h:inputText value="#{product.description}" title=""/></td>
+					<td><h:inputText id="description" value="#{product.description}" title=""/></td>
 				</tr>
 				<tr>
 					<td><h:commandButton value="Add Product" action="#{productController.addProduct(product)}"/></td>
 				</tr>
 			</table>
 		</h:form>
+		</body>
 	</ui:define>
 	</ui:composition>
 </html>
