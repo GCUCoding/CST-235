@@ -8,17 +8,50 @@
 	<ui:define name="title">Shop</ui:define>
 	<ui:define name="content">
 		<h1>Shop</h1>
-		<table>
-			<tr>
-				<th>ID:</th>
-				<th>Product Name:</th>
-				<th>Price:</th>
-				<th>Description:</th>
-			</tr>
-			<tr>
-				<td></td>
-			</tr>
-		</table>
+		<h:dataTable value="#{productController.products}" 
+			var="product" styleClass="productsTable"
+			headerClass="productTableHeader"
+			rowClasses="productTableOddRow,productTableEvenRow">
+				<h:column>
+					<f:facet name="header">ID #</f:facet>
+					#{product.id}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Product Name</f:facet>
+					#{product.name}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Price</f:facet>
+					#{product.price}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Description</f:facet>
+					#{product.description}
+				</h:column>
+		</h:dataTable>
+		<h:form>
+			<table>
+				<tr>
+					<th>ID:</th>
+					<td><h:inputText value="#{product.id}" title=""/></td>
+				</tr>
+				<tr>
+					<th>Product Name:</th>
+					<td><h:inputSecret value="#{product.name}" title=""/></td>
+				</tr>
+				<tr>
+					<th>Product Price:</th>
+					<td><h:inputSecret value="#{product.price}" title=""/></td>
+				</tr>
+				<tr>
+					<th>Product Description:</th>
+					<td><h:inputSecret value="#{product.description}" title=""/></td>
+				</tr>
+				<tr>
+					<td><h:commandButton value="Add Product" action="#{productController.addProduct(product)}"/></td>
+				</tr>
+			</table>
+		</h:form>
 	</ui:define>
 	</ui:composition>
 </html>

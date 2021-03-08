@@ -15,7 +15,7 @@ table
 	align-content: center;
 	padding: 10px 5px;
 	margin: auto;
-	background-color: #85e0e0;
+	background-color:aqua;
 	font-size: 20px;
 }
 tr
@@ -29,6 +29,36 @@ th
 td
 {
 	padding: 10px 5px;
+}
+
+.productsTable
+{
+	align-content: center;
+	padding: 10px 5px;
+	margin: auto;
+	background-color:aqua;
+	font-size: 20px;
+}
+
+.productTableHeader
+{
+	background-color: darkturquoise;
+	border: 2px solid steelblue;
+	padding: 5px;
+}
+
+.productTableOddRow
+{
+	background-color: lightcyan;
+	border: 2px solid steelblue;
+	padding: 5px;
+}
+
+.productTableEvenRow
+{
+	background-color: lightskyblue;
+	border: 2px solid steelblue;
+	padding: 5px;
 }
 
 .WaterBG
@@ -119,11 +149,11 @@ td
 }
 
 .navItemLeft:hover {
-  background-color: #85e0e0;
+  background-color:aqua;
   color: black;
 }
 
 .navItemRight:hover {
-  background-color: #85e0e0;
+  background-color:aqua;
   color: black;
 }
