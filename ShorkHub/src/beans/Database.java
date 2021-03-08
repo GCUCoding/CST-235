@@ -10,6 +10,7 @@ public class Database
 	public Database()
 	{
 		this.products = new ArrayList<Product>();
+		products.add(new Product(1, "test", 1.0, "test"));
 		this.users = new ArrayList<User>();
 	}
 

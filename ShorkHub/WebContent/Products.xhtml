@@ -9,24 +9,24 @@
 	<ui:define name="content">
 		<h1>Shop</h1>
 		<h:dataTable value="#{productController.products}" 
-			var="product" styleClass="productsTable"
+			var="p" styleClass="productsTable"
 			headerClass="productTableHeader"
 			rowClasses="productTableOddRow,productTableEvenRow">
 				<h:column>
 					<f:facet name="header">ID #</f:facet>
-					#{product.id}
+					#{p.id}
 				</h:column>
 				<h:column>
 					<f:facet name="header">Product Name</f:facet>
-					#{product.name}
+					#{p.name}
 				</h:column>
 				<h:column>
 					<f:facet name="header">Price</f:facet>
-					#{product.price}
+					#{p.price}
 				</h:column>
 				<h:column>
 					<f:facet name="header">Description</f:facet>
-					#{product.description}
+					#{p.description}
 				</h:column>
 		</h:dataTable>
 		<h:form>
@@ -37,15 +37,15 @@
 				</tr>
 				<tr>
 					<th>Product Name:</th>
-					<td><h:inputSecret value="#{product.name}" title=""/></td>
+					<td><h:inputText value="#{product.name}" title=""/></td>
 				</tr>
 				<tr>
 					<th>Product Price:</th>
-					<td><h:inputSecret value="#{product.price}" title=""/></td>
+					<td><h:inputText value="#{product.price}" title=""/></td>
 				</tr>
 				<tr>
 					<th>Product Description:</th>
-					<td><h:inputSecret value="#{product.description}" title=""/></td>
+					<td><h:inputText value="#{product.description}" title=""/></td>
 				</tr>
 				<tr>
 					<td><h:commandButton value="Add Product" action="#{productController.addProduct(product)}"/></td>

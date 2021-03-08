@@ -14,7 +14,7 @@ import services.ProductService;
 @ViewScoped
 public class ProductController 
 {
-	ProductService productService;
+	ProductService productService = new ProductService();
 	@Inject
 	ArrayList<Product> products;
 	public ArrayList<Product> getProducts()
