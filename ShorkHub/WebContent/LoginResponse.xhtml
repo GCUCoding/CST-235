@@ -4,8 +4,15 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
 
-<h:head></h:head> 
-<body> 
-#{success}
-</body> 
+<ui:composition template="/layouts/commonLayout.xhtml"> 
+<ui:define name="title">Login</ui:define>
+<ui:define name="content">
+<h:body> 
+<h1>Welcome Back #{user.username}!!</h1>
+<p>Website currently under construction, please come back later and check out our cool new features!</p>
+<p>In the meantime - Here's a cool picture of a shark</p>
+<img src="Resources/Pictures/CoolShark.jpg" class="CoolSharkPicture" alt="A Cool picture of a great white swiiming through a shool of fish"/>
+</h:body> 
+</ui:define>
+</ui:composition>
 </html>

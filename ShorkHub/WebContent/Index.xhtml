@@ -4,44 +4,15 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
 
-
-<h:head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-</style>
-
-</h:head> 
-<body style="background-image:url('Pictures/lessCrappyBG.jpg'); background-repeat: no-repeat; background-position: center top; background-size: 100%; margin: 0">
-<ul>
-  <li><a class="active" href="#Home">Home</a></li>
-  <li><a href="#Shop">Shop</a></li>
-  <li style="float: right"><a href="Login.xhtml">Log in</a></li>
-  <li style="float: right"><a href="Registration.xhtml">Sign Up</a></li>
-</ul> 
-<h1 style="text-align: Center">Welcome to SharkHub!</h1>
-<img src="Pictures/blacktip-1.jpg" alt="Black tip shark" style="width: 40%; display: block; margin-left: auto; margin-right: auto" />
-
+<body>
+<ui:composition template="/layouts/commonLayout.xhtml">
+<ui:define name="content">
+<h1>Welcome to SharkHub!</h1>
+<p>Feel free to Login or Sign Up for an account!</p>
+<p>We don't have too many features just yet, but Stay Tuned!</p>
+<p>For now, Enjoy our shark Pictures! :)</p>
+<img src="Resources/Pictures/blacktip-1.jpg" alt="Black tip shark" class="CoolSharkPicture"/>
+</ui:define>
+</ui:composition>
 </body> 
 </html>

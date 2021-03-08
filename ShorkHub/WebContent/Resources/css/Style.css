@@ -1,0 +1,129 @@
+h1
+{
+	font-family: "Brush Script MT", cursive;
+	text-align: center;
+}
+
+Body
+{
+	align-content: center;
+	text-align: center;
+}
+
+table
+{
+	align-content: center;
+	padding: 10px 5px;
+	margin: auto;
+	background-color: #85e0e0;
+	font-size: 20px;
+}
+tr
+{
+	padding: 10px 5px;
+}
+th
+{
+	padding: 10px 5px;
+}
+td
+{
+	padding: 10px 5px;
+}
+
+.WaterBG
+{
+	background-image:url('../Pictures/WaterBG.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	margin: 0;
+}
+
+.CoolSharkPicture
+{
+	width: 50%; 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.Message
+{
+	font-size: 12px;
+	color: red;
+}
+
+.HiddenMessage
+{
+	font-size: 12px;
+	color: #85e0e0;
+}
+
+.navbar
+{
+	background-color: #002533;
+	font-family: "Brush Script MT", cursive;
+	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+}
+
+.navRight /* Right div */
+{
+	display: block;
+    float: left;
+    width: 25%;
+}
+
+.navLeft /* Left Div */
+{
+	display: block;
+    float: left;
+    width: 25%;
+}
+
+.navTitle /* Center Div + Title Text */
+{
+  	font-size: 20px;
+  	display: block;
+  	color: white;
+  	width: 50%;
+  	padding: 10px 0px;
+	float: left; 
+  	align-content: center
+}
+
+.navItemLeft /* Buttons on the left side */
+{
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 20px;
+  float: left;
+  background-color: #002533;
+  font-family: "Brush Script MT", cursive;
+}
+
+.navItemRight /* Buttons on the right side */
+{
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 20px;
+  float: right;
+  background-color: #002533;
+  font-family: "Brush Script MT", cursive;
+}
+
+.navItemLeft:hover {
+  background-color: #85e0e0;
+  color: black;
+}
+
+.navItemRight:hover {
+  background-color: #85e0e0;
+  color: black;
+}

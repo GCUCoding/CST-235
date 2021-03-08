@@ -4,11 +4,16 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
 
-<h:head></h:head> 
+<ui:composition template="/layouts/commonLayout.xhtml"> 
+<ui:define name="title">Register</ui:define>
+<ui:define name="content"> 
 <body> 
-Thank you for signing up #{user.name}!
-<p>
+<h1>Thank you for signing up #{user.name}!</h1>
+<p>Website currently under construction, please come back later and check out our cool new features!</p>
+<p>In the meantime - Here's a cool picture of a shark</p>
+<img src="Resources/Pictures/leopardShark.jpg" class="CoolSharkPicture" alt="A Cool picture of a leopard shark"/>
 #{success}
-</p>
 </body> 
+</ui:define>
+</ui:composition>
 </html>
